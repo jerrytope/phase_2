@@ -1,4 +1,15 @@
 import pandas as pd
+from bs4 import BeautifulSoup
+import re
+from nltk.corpus import stopwords
+
+
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import classification_report, accuracy_score
+
+
 
 def load_data():
     new_df = pd.read_csv('../data/predictions.csv')
@@ -51,9 +62,6 @@ def feature_engineering(merged_df):
 
 
 
-from bs4 import BeautifulSoup
-import re
-from nltk.corpus import stopwords
 
 def clean_text(text):
     if isinstance(text, str):
@@ -122,12 +130,6 @@ def add_keyword_features(merged_df):
 
 
 
-
-
-from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import classification_report, accuracy_score
 
 def train_model(df):
     # Convert boolean target to binary
