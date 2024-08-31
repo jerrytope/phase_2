@@ -98,6 +98,6 @@ def predict(document: DocumentInput):
     
     return {
         'DocumentID': input_data['DocumentID'],
-        'Relevance': relevance_status,
+        'Prediction': relevance_status,
         'Confidence': confidence
     }

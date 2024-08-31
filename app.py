@@ -3,7 +3,8 @@ import requests
 import json
 
 # FastAPI URL - ensure this matches where your FastAPI is running
-FASTAPI_URL = "http://127.0.0.1:8000/predict/"
+# FASTAPI_URL = "http://127.0.0.1:8000/predict/"
+FASTAPI_URL = "http://44.204.152.90:8000/predict/"
 
 # Streamlit interface
 st.title("Document Relevance Predictor")
