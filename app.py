@@ -10,14 +10,14 @@ FASTAPI_URL = "http://44.204.152.90:8000/predict/"
 st.title("Document Relevance Predictor")
 
 # Input fields
-DocumentID = st.text_input("Document ID", "1")
-Title = st.text_input("Title", "SATURDAY November 4 2023 Official Gazette Issue 32359 Presidency Topic Energy Savings Public Buildings GENERALIZATION")
-RegulatorId = st.text_input("Regulator ID", "1")
-SourceLanguage = st.text_input("Source Language", "English")
-DocumentTypeId = st.text_input("Document Type ID", "1")
+DocumentID = st.text_input("Document ID")
+Title = st.text_input("Title")
+RegulatorId = st.text_input("Regulator ID")
+SourceLanguage = st.text_input("Source Language")
+DocumentTypeId = st.text_input("Document Type ID")
 PublicationDate = st.date_input("Publication Date")
 IsPdf = st.checkbox("Is PDF")
-Content = st.text_area("Content", "PresidencySubject Energy Saving Public Buildings...")
+Content = st.text_area("Content")
 
 # Create a button to send the data
 if st.button("Predict Relevance"):
