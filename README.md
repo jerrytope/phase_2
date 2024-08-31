@@ -8,6 +8,7 @@ Features
     Keyword Analysis: The application performs keyword analysis on the document content to assist in feature engineering.
 
 RUN uvicorn main:app --reload to load the fastapi application 
+RUN streamlit run app.py to load the streamlit application 
 
 # INPUT DATA
 {
@@ -65,3 +66,4 @@ pip install -r requirements.txt
 
 Run the Application:
 uvicorn main:app --reload
+streamlit run app.py
