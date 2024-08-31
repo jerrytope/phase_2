@@ -6,3 +6,4 @@ beautifulsoup4
 nltk
 scikit-learn==1.0.2
 uvicorn
+numpy=1.23.2
