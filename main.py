@@ -7,7 +7,7 @@ import re
 app = FastAPI()
 
 # Load the pre-trained model and vectorizer
-model = joblib.load('model/regulation_predictor_model.pkl')
+model = joblib.load('model/regulation_predictor_model2.pkl')
 vectorizer = joblib.load('model/tfidf_vectorizer.pkl')
 
 class DocumentInput(BaseModel):

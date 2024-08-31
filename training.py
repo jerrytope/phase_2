@@ -2,6 +2,8 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import re
 from nltk.corpus import stopwords
+import os 
+import joblib
 
 
 from sklearn.model_selection import train_test_split
@@ -12,8 +14,8 @@ from sklearn.metrics import classification_report, accuracy_score
 
 
 def load_data():
-    new_df = pd.read_csv('../data/predictions.csv')
-    df2 = pd.read_csv('../data/relevance_data.csv')
+    new_df = pd.read_csv('data/predictions.csv')
+    df2 = pd.read_csv('data/relevance_data.csv')
     return new_df, df2
 
 def merge_data(new_df, df2):
@@ -148,8 +150,8 @@ def train_model(df):
     # Initialize and train the model
     model = RandomForestClassifier(n_estimators=100, random_state=42)
     model.fit(X_train, y_train)
-    os.makedirs('../models', exist_ok=True)
-    joblib.dump(model, '../models/regulation_predictor_model.pkl')
+    os.makedirs('model', exist_ok=True)
+    joblib.dump(model, 'model\/regulation_predictor_model2.pkl')
     
     # Make predictions and evaluate
     y_pred = model.predict(X_test)
